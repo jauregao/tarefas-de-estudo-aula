@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, InjectionToken, signal } from '@angular/core';
+import { environment } from '../environments/environment';
 import { catchError, finalize, Observable, of, switchMap, tap, throwError } from 'rxjs';
 import { AuthSessionStore } from './auth-session.store';
 
@@ -24,7 +25,7 @@ interface TokenResposta {
 }
 
 export const API_BASE_URL = new InjectionToken<string>('API_BASE_URL', {
-  providedIn: 'root', factory: () => 'http://localhost:5027',
+  providedIn: 'root', factory: () => environment.apiBaseUrl,
 });
 
 @Injectable({ providedIn: 'root' })
