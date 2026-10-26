@@ -1,3 +1,3 @@
 export const environment = {
-  apiBaseUrl: 'https://tarefas-de-estudo-resolucao.onrender.com',
+  apiBaseUrl: 'https://tarefas-de-estudo-aula.onrender.com',
 };
